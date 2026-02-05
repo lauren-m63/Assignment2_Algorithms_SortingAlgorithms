@@ -13,6 +13,7 @@ public class selectionSort {
                }
            }
 
+
            // Swap numbers[i] and numbers[indexSmallest]
            int temp = numbers[i];
            numbers[i] = numbers[indexSmallest];
@@ -30,5 +31,6 @@ public class selectionSort {
 first you go through the whole lsit and find the smallest number
 then you swap it with the lowest index ?
 then you look only at i+1 and ignore the already sorted
+
 
  */
