@@ -4,7 +4,7 @@ public class shellSort implements SortingAlgorithm{
 
 
     public int[]sorty(int[] numbers) {
-        int startIndex = 0; //CHANGE THI S
+        int startIndex = 0; //CHANGE THI S ?? wai what
         int gap = numbers.length; //CHANGE THIS
         for (int i = startIndex + gap; i < numbers.length; i += gap) {
             int j = i;
