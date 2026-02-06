@@ -1,6 +1,6 @@
 package six;
 
-public class insertionSort {
+public class insertionSort implements SortingAlgorithm{
 
     public static void main(String[] args) {
 
@@ -42,6 +42,8 @@ if they are uneven then swap them and now compare them if you swapped with the v
 now all the first 3 elements are sorted
 so basically you are looking at one element and while that element is out of place shift it down so the smallest is first
 so while they are uneven.. keep swapping which is the hwile loop
+
+
 
 
  */

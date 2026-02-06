@@ -1,6 +1,6 @@
 package six;
 
-public class selectionSort {
+public class selectionSort implements SortingAlgorithm{
 
    public int[] selectionSort(int[] numbers) {
 
