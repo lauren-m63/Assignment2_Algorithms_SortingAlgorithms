@@ -1,19 +1,26 @@
 package six;
+
+
+
 public class bubbleSort implements SortingAlgorithm {
+
+
     public int[] sorty(int[] input) {
         for (int i = 0; i < input.length - 1; i++) {
             for (int j = 0; j < input.length - i - 1; j++) {
                 // its arraylength-i-1 because you are trying to swap adjacent elements
                 // so its saying dont go past the last element arraylength-1
                 // j has to stop 1 before the last index because its comparring j and j+1 so it would go out of bounds if you didnt have the minus 1
-                if (input[j] > input[j+1]) {
+                if (input[j] > input[j + 1]) {
                     int temp = input[j];
                     input[j] = input[j + 1];
                     input[j + 1] = temp;
                 }
             }
         } // end for loops
+        return input;
     }
+}
 
 // on the first pass i=0 and you are looking at j=0 which is i=0 also on the first pass they are the same
     // so i want to compare adjacent so im going to look at the first index j=0 and second index which is j+1 which is also i+1 since you start at 0
@@ -24,4 +31,3 @@ public class bubbleSort implements SortingAlgorithm {
 
     //becayse each time you compare itll swap and then itll compare what was jsut the larger one to the next element
 //so the largest goes to the end basically and then the smallest will automatically be at the front sice the large ones are being moves
-}

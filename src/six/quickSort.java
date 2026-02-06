@@ -3,41 +3,43 @@ package six;
 public class quickSort implements SortingAlgorithm{
 
 
-    public static void main(String[] args) {
-
+    public int[] sorty(int[] arr) {
+        int [] input = arr.clone();
+        quickSort (arr, 0, arr.length-1);
+        return input;
     }
 
-    public int[] quickSort(int[] arr, int lowIndex, int highIndex) {
+    private void quickSort (int[] arr, int lowIndex, int highIndex) {
+
+        if (lowIndex <= highIndex) return; // base case?
 
         int midpoint = lowIndex + (highIndex - lowIndex) / 2;
-       int  pivot = arr[midpoint]; // middle element is pivot
+        int  pivot = arr[midpoint]; // middle element is pivot
 
-        // okay so it is the first index , last and middle
-       boolean done = false;
-        while (!done) {  // if the low index is smaller than the pivot then you move forward
-            while (arr[lowIndex] < pivot) { // ur just rearranging the whole list so everything on the left is smaller and the right is bigger
-                lowIndex += 1;
-            } // when you find an element that is bigger than the pivot leave it and if you find one that is smaller then you swap the positions
-            while (pivot < arr[highIndex]) {
-                highIndex -= 1;
-            }
+        int left= lowIndex;
+        int right = highIndex;
+        while (left <= right) {
+            while (arr[left] <pivot) left++;
+            while (arr[right] > pivot) right--;   // move right pointer to left
 
-            if (lowIndex >= highIndex) {
-                done = true;
-            }
-            else {
-               int  temp = arr[lowIndex];
-                arr[lowIndex] = arr[highIndex];
-                arr[highIndex] = temp;
+            if (left <= right) {  // swap elements if out of order
+                int temp = arr[left];
+                arr[left] = arr[right];
+                arr[right] = temp;
 
-                lowIndex += 1;
-                highIndex -= 1;
+                left++;
+                right--;
             }
         }
 
-        return arr;
-    }
-}
+        // Recursively sort left and right halves
+        quickSort(arr, lowIndex, right);
+        quickSort(arr, left, highIndex);
+
+        } // end method
+        // okay so it is the first index , last and middle
+} // end class
+
 
 /*
 
@@ -60,4 +62,5 @@ so if one of the randoms is less than the pivot then itll swap with the most rec
 and if its greater then it does nothing
 
 you are only doing the smaller ones and then the biggest one will just eventually be pushed to the end
+ I HATE QUICKSORT
  */

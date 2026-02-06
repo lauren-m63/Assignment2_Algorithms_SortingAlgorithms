@@ -1,0 +1,12 @@
+so based on the O(..) here is what I think will be slow
+
+1. bubble sort because it is double nested loop which i am always using so this is O(n^2) runtime and quite slow
+2. insertion sort
+3. selection sort
+// i think all of the above will be relativley equally slow because they are all the same runtime of n^2 because of the multi loop vibe
+
+4.
+
+6. merge sort
+// quick sort and merge sort are both O(n log n) but it says that merge sort is always that where the quick has a worst case o f n^2 so maybe that is above shell?
+- merge should be last

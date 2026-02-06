@@ -3,7 +3,9 @@ package six;
 public class shellSort implements SortingAlgorithm{
 
 
-    public shellSort(int[] numbers, int startIndex, int gap) {
+    public int[]sorty(int[] numbers) {
+        int startIndex = 0; //CHANGE THI S
+        int gap = numbers.length; //CHANGE THIS
         for (int i = startIndex + gap; i < numbers.length; i += gap) {
             int j = i;
             while (j - gap >= startIndex && numbers[j] < numbers[j - gap]) {
@@ -15,6 +17,7 @@ public class shellSort implements SortingAlgorithm{
             }
         }
 
-
+        return numbers;
     } // end shellsort method
+
     } // end class

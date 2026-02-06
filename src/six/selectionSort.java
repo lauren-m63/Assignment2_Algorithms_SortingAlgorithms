@@ -2,7 +2,7 @@ package six;
 
 public class selectionSort implements SortingAlgorithm{
 
-   public int[] selectionSort(int[] numbers) {
+   public int[] sorty(int[] numbers) {
 
        for (int i = 0; i < numbers.length - 1; i++) {
            // Find index of smallest remaining element

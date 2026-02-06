@@ -2,12 +2,7 @@ package six;
 
 public class insertionSort implements SortingAlgorithm{
 
-    public static void main(String[] args) {
-
-    }
-
-    public int[] sort(int[] numbers) {
-
+    public int[] sorty(int[] numbers) {
             int i = 0;
            int  j = 0;
            int  temp = 0;  // Temporary variable for swap
