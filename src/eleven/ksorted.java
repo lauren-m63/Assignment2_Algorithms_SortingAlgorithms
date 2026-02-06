@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class ksorted {
 
-    public void ksortit (int[] arr, int k){
+    public static void ksortit(int[] arr, int k){
         //bruh
 
         // k sorted means i need my k to be the k
