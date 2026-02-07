@@ -8,14 +8,14 @@ public class ksorted {
         //bruh
 
         // k sorted means i need my k to be the k
-        for (int i = 0; i < arr.length; i -= k){
+        for (int i = 0; i < arr.length; i++){
             arr[i] = i+2;  // my sorted values jsut counting up, maybe ill do it all even just for fun
         }
 
         Random random = new Random();
 
-        for (int i = 0; i < arr.length; i += k){
-            int swap = i+ random.nextInt(Math.min(k + 1, arr.length) - i);
+        for (int i = 0; i < arr.length; i++){
+            int swap = i + random.nextInt(Math.min(k + 1, arr.length - i));
 
             int temp = arr[i];
             arr[i] = arr[swap];

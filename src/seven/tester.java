@@ -39,6 +39,17 @@ public class tester {
 
     } // end single test
 
+    public double singleTestK(int []arr){ // make time MILLISEC ms
+// all just 0 basically so nano
+        long start = System.nanoTime();
+        sorting.sorty(arr);  // my sorting algorithms of differnet types with my made up array
+
+        long end = System.nanoTime();
+
+        return (end - start);
+
+    } // end single test
+
     public void test (int iterations, int size){
         double totaltime = 0;
         int [] arr = new int[size];
